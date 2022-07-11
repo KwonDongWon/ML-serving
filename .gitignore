@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ml-model
+*.pkl
+
+# idea
+.idea/
