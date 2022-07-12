@@ -8,7 +8,7 @@ model = pickle.load(open('../ml-model/model.pkl', 'rb'))
 
 
 @app.route('/predict', methods=['POST'])
-def predict_api():
+def predict():
     data = request.get_json(force=True)
     prediction = model.predict(np.array(data['values']))
     return jsonify(prediction=prediction.tolist()), 201
